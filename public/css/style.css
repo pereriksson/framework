@@ -1,0 +1,72 @@
+.container {
+    margin-top: 3rem;
+}
+
+.dice {
+    width: 2.6rem;
+    height: 2.6rem;
+    border: 0;
+}
+
+.dice-1 {
+    background: url("../assets/images/dice-1.svg");
+}
+
+.dice-2 {
+    background: url("../assets/images/dice-2.svg");
+}
+
+.dice-3 {
+    background: url("../assets/images/dice-3.svg");
+}
+
+.dice-4 {
+    background: url("../assets/images/dice-4.svg");
+}
+
+.dice-5 {
+    background: url("../assets/images/dice-5.svg");
+}
+
+.dice-6 {
+    background: url("../assets/images/dice-6.svg");
+}
+
+.dice-6.selected {
+    background: url("../assets/images/dice-red-6.svg");
+}
+
+.dice-1.selected {
+    background: url("../assets/images/dice-red-1.svg");
+}
+
+.dice-2.selected {
+    background: url("../assets/images/dice-red-2.svg");
+}
+
+.dice-3.selected {
+    background: url("../assets/images/dice-red-3.svg");
+}
+
+.dice-4.selected {
+    background: url("../assets/images/dice-red-4.svg");
+}
+
+.dice-5.selected {
+    background: url("../assets/images/dice-red-5.svg");
+}
+
+.dice-6.selected {
+    background: url("../assets/images/dice-red-6.svg");
+}
+
+.yatzy-score-card td {
+    border: 0.0625rem solid #000;
+    padding: 0.0625rem 0.250rem;
+}
+
+.yatzy-score-card .sum td,
+.yatzy-score-card .player td {
+    border: 0.1250rem solid #000;
+    font-weight: bold;
+}
