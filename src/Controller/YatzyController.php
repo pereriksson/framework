@@ -25,16 +25,6 @@ class YatzyController extends AbstractController
         $this->session = $session;
     }
 
-    private function isPostAction(string $action): bool
-    {
-
-        if ($this->request->get("action") == $action) {
-            return true;
-        }
-
-        return false;
-    }
-
     private function leave()
     {
         $this->session->remove("yatzy");
@@ -140,7 +130,7 @@ class YatzyController extends AbstractController
     /**
      * @Route("/yatzy", name="app_yatzy", methods={"GET"})
      */
-    public function number(): Response
+    public function index(): Response
     {
         $vars = [];
 
