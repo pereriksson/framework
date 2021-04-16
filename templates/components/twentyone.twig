@@ -1,0 +1,13 @@
+<h1>Tjugoett</h1>
+
+{% if twentyone %}
+
+{% include 'components/twentyone/player_screen.twig' %}
+
+{% include 'components/reset.twig' %}
+
+{% else %}
+
+{% include 'components/start.twig' %}
+
+{% endif %}

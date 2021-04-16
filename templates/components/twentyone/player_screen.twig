@@ -1,0 +1,43 @@
+
+<h2>Nuvarande rond</h2>
+
+{% if winner %}
+<p>Vinnare: {{winner}}</p>
+{% endif %}
+
+{% if winner == "Jag" %}
+<h1>Grattis!</h1>
+{% endif %}
+
+<p>Spelets status: {{status}}</p>
+
+<p>Din tärningssumma: {{my_score}}</p>
+
+<p>Datorns tärningssumma: {{computer_score}}</p>
+
+{% if twentyone.getStatus == 1 %}
+<p>
+    <form method="post">
+        <input type="hidden" name="action" value="new_round"/>
+        <input type="submit" value="Ny rond"/>
+    </form>
+</p>
+{% endif %}
+
+{% if twentyone.getStatus == 0 %}
+<p>
+    <form method="post">
+        <input type="hidden" name="action" value="throw"/>
+        <input type="submit" value="Kasta tärningarna"/>
+    </form>
+</p>
+
+<p>
+    <form method="post">
+        <input type="hidden" name="action" value="stop"/>
+        <input type="submit" value="Stanna här"/>
+    </form>
+</p>
+{% endif %}
+
+{% include 'components/rounds.twig' %}

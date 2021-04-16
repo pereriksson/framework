@@ -1,0 +1,47 @@
+
+<h2>Nuvarande rond</h2>
+
+{% if yatzy.getStatus == 1 %}
+<p>
+    <form method="post">
+        <input type="hidden" name="action" value="new_round"/>
+        <input type="submit" value="Ny rond"/>
+    </form>
+</p>
+{% endif %}
+
+{% if yatzy.getStatus == 0 %}
+<p>
+    <form method="post">
+        {% for dice in dices %}
+        <input type="hidden" name="keep-dice-{{dice.id}}" value="{{dice.kept}}"/>
+        {% endfor %}
+        <input type="hidden" name="action" value="throw"/>
+        <input type="submit" value="Kasta tärningarna"/>
+    </form>
+</p>
+
+{% endif %}
+
+{% if dices %}
+
+<h2>Mitt slag</h2>
+
+{% for dice in dices %}
+<img class="dice
+    {% if dice.kept == true %}
+    selected
+    {% endif %}
+    dice-{{dice.value}}"
+    {% if throwRound == 3 %}
+    data-locked="true"
+    {% endif %}
+    data-dice-number="{{dice.id}}"/>
+{% endfor %}
+
+<p>Klicka på de tärningar du vill behålla.</p>
+
+{% endif %}
+
+{% include 'components/yatzy/score_card.twig' %}
+

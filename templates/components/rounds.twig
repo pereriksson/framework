@@ -1,0 +1,15 @@
+<h2>Ronder</h2>
+{% if rounds %}
+<table class="table">
+    <tr>
+        <th>Rond</th>
+        <th>Vinnare</th>
+    </tr>
+{% for round in rounds %}
+    <tr>
+        <td>{{loop.index}}</td>
+        <td>{{round.winner.getName}}</td>
+    </tr>
+{% endfor %}
+</table>
+{%endif%}

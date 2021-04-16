@@ -1,0 +1,13 @@
+<h1>Yatzy</h1>
+
+{% if yatzy is defined %}
+
+{% include 'components/yatzy/player_screen.twig' %}
+
+{% include 'components/yatzy/reset.twig' %}
+
+{% else %}
+
+{% include 'components/yatzy/start.twig' %}
+
+{% endif %}
