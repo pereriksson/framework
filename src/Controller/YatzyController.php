@@ -10,7 +10,6 @@ use App\Yatzy\Yatzy;
 use App\Dice\DiceHand;
 use Symfony\Component\HttpFoundation\Request;
 
-
 class YatzyController extends AbstractController
 {
     const PLAYING = 0;
