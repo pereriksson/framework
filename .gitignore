@@ -1,4 +1,6 @@
 
+/build/
+
 ###> symfony/framework-bundle ###
 /.env.local
 /.env.local.php
@@ -16,4 +18,3 @@
 ###< symfony/phpunit-bridge ###
 
 .DS_Store
-
