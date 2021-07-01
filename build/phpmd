@@ -1,0 +1,2 @@
+/Users/per/Dropbox/Study/BTH/dbwebb-kurser/mvc/me/framework/src/Kernel.php:14	Avoid assigning values to variables in if clauses and the like (line '22', column '27').
+/Users/per/Dropbox/Study/BTH/dbwebb-kurser/mvc/me/framework/src/Kernel.php:27	Avoid assigning values to variables in if clauses and the like (line '34', column '27').
