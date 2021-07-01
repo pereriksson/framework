@@ -1,6 +1,6 @@
 
 /build/
-/.env
+/.env*
 .idea/
 
 ###> symfony/framework-bundle ###
