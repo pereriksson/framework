@@ -1,0 +1,20 @@
+<h2>Böcker</h2>
+
+{% if books %}
+<table class="table">
+    <tr>
+        <th></th>
+        <th>Titel</th>
+        <th>Författare</th>
+        <th>ISBN</th>
+    </tr>
+{% for book in books %}
+    <tr>
+        <td><img class="book" src="{{ asset("assets/images/books/" ~ book.id ~ ".jpg") }}"/></td>
+        <td>{{book.title}}</td>
+        <td>{{book.author}}</td>
+        <td>{{book.isbn}}</td>
+    </tr>
+{% endfor %}
+</table>
+{%endif%}
