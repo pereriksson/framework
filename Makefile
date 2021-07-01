@@ -84,7 +84,7 @@ phpstan: prepare
 	- [ ! -f .phpstan.neon ] || $(PHPSTAN) analyse -c .phpstan.neon | tee build/phpstan
 
 phpunit: prepare
-	[ ! -d "test" ] || $(PHPUNIT) --configuration .phpunit.xml $(options)
+	[ ! -d "tests" ] || $(PHPUNIT)
 
 cs: phpcs
 
