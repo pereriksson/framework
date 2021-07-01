@@ -1,4 +1,3 @@
-
 /build/
 /.env*
 .idea/
@@ -12,11 +11,9 @@
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
+.DS_Store
 
 ###> symfony/phpunit-bridge ###
-.phpunit
 .phpunit.result.cache
 /phpunit.xml
 ###< symfony/phpunit-bridge ###
-
-.DS_Store
