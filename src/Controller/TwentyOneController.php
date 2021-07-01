@@ -10,6 +10,7 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use App\Yatzy\Yatzy;
 use App\Dice\DiceHand;
 use Symfony\Component\HttpFoundation\Request;
+use App\Entity\Score;
 
 class TwentyOneController extends AbstractController
 {
@@ -86,6 +87,8 @@ class TwentyOneController extends AbstractController
      */
     public function action(Request $request)
     {
+        $store = false;
+
         if ($request->get("action") == "leave") {
             $this->session->remove("twentyone");
         }
@@ -109,6 +112,7 @@ class TwentyOneController extends AbstractController
 
             if ($human->getStatus() !== $this::PLAYING) {
                 $this->simulateComputer($twentyone);
+                $store = true;
             }
         }
 
@@ -122,8 +126,18 @@ class TwentyOneController extends AbstractController
             $twentyone->setPlayedAsStopped(0);
 
             $this->simulateComputer($twentyone);
+            $store = true;
         }
 
+        if ($store) {
+            // Persist this round into memory
+            $entityManager = $this->getDoctrine()->getManager();
+            $score = new Score();
+            $score->setGame("TwentyOne");
+            $score->setWinner($this->session->get("twentyone")->getCurrentRound()->getWinner()->getName());
+            $entityManager->persist($score);
+            $entityManager->flush();
+        }
 
         return $this->redirectToRoute('app_twentyone');
     }

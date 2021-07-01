@@ -1,0 +1,16 @@
+<h2>Score</h2>
+
+{% if score %}
+<table class="table">
+    <tr>
+        <th>Spel</th>
+        <th>Vinnare</th>
+    </tr>
+{% for row in score %}
+    <tr>
+        <td>{{row.game}}</td>
+        <td>{{row.winner}}</td>
+    </tr>
+{% endfor %}
+</table>
+{%endif%}
