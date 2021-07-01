@@ -70,3 +70,7 @@
     border: 0.1250rem solid #000;
     font-weight: bold;
 }
+
+.book {
+    width: 8rem;
+}
