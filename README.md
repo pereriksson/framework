@@ -1,5 +1,11 @@
 # Framework
 
+This is the repository for the course Object-oriented web technologies (DV1608) at Blekinge Institute of Technology.
+
+![badge](https://scrutinizer-ci.com/g/pereriksson/framework/badges/quality-score.png?b=master "badge")
+![badge](https://scrutinizer-ci.com/g/pereriksson/framework/badges/coverage.png?b=master "badge")
+![badge](https://scrutinizer-ci.com/g/pereriksson/framework/badges/build.png?b=master "badge")
+
 ## Using Doctrine
 
 ```shell
